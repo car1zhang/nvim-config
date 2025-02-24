@@ -1,4 +1,2 @@
-require('core.keymaps')
-require('core.plugins')
-require('core.plugin_config')
-require('core.lsp')
+require("config.lazy")
+require("config.vim")
