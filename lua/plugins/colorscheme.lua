@@ -10,4 +10,8 @@ return {
         "folke/tokyonight.nvim",
         lazy = true,
     },
+    {
+        "morhetz/gruvbox",
+        lazy = true,
+    },
 }

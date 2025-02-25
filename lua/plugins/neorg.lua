@@ -1,4 +1,4 @@
-return {
+return { -- NOTE: Need to install luarocks manually
     {
         "nvim-neorg/neorg",
         dependencies = {

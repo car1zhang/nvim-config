@@ -27,7 +27,7 @@ return {
                 },
             })
 
-            vim.keymap.set("n", "<leader>n", ":Neorg workspace notes<CR>", { desc = "Go to notes" })
+            vim.keymap.set("n", "<leader>e", ":NvimTreeFindFile<CR>", { desc = "Open Nvimtree" })
         end,
     },
 }
