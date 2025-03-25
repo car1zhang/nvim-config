@@ -8,3 +8,7 @@ vim.opt.bs = '2'
 vim.opt.rnu = true
 
 -- vim.keymap.set('n', '<c-r>', '<cmd>split | term g++ -o main.exe "%:p" && main.exe<cr>')
+vim.keymap.set('n', '<leader>y', '"+y_')
+vim.keymap.set('n', '<leader>Y', 'gg"+yG_')
+vim.keymap.set('n', '<leader>p', '"+p_')
+
