@@ -8,7 +8,7 @@ vim.opt.bs = '2'
 vim.opt.nu = true
 vim.opt.rnu = true
 
-vim.cmd([[colorscheme vim]])
+vim.cmd([[colorscheme gruvbox]])
 
 -- vim.keymap.set('n', '<c-r>', '<cmd>split | term g++ -o main.exe "%:p" && main.exe<cr>')
 vim.keymap.set('n', '<leader>y', '"+y_')
