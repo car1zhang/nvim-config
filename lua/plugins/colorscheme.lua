@@ -2,16 +2,13 @@ return {
     {
         "rebelot/kanagawa.nvim",
         lazy = false,
-        config = function()
-            vim.cmd([[colorscheme kanagawa]])
-        end,
     },
     {
         "folke/tokyonight.nvim",
-        lazy = true,
+        lazy = false,
     },
     {
         "morhetz/gruvbox",
-        lazy = true,
+        lazy = false,
     },
 }
