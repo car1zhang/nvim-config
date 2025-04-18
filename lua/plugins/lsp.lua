@@ -32,7 +32,7 @@ return {
         config = function()
             require("mason").setup()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "pyright", "clangd", "ts_ls", "rust_analyzer" },
+                ensure_installed = { "lua_ls", "pyright", "clangd", "ts_ls", "rust_analyzer", "gopls" },
                 automatic_installation = true,
             })
 
@@ -81,6 +81,11 @@ return {
             lspconfig.rust_analyzer.setup({
                 on_attach = on_attach,
                 capabilities = require("cmp_nvim_lsp").default_capabilities(),
+            })
+
+            lspconfig.gopls.setup({
+                on_attach = on_attach,
+                capabilities = require("cmp_nvim_lsp").default_capabilities()
             })
 
             local cmp = require('cmp')
