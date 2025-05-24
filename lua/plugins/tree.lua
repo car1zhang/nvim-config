@@ -25,6 +25,9 @@ return {
                         },
                     },
                 },
+                filters = {
+                    git_ignored = false,
+                },
             })
 
             vim.keymap.set("n", "<leader>e", ":NvimTreeFindFile<CR>", { desc = "Open Nvimtree" })

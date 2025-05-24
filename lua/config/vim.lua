@@ -14,5 +14,3 @@ vim.cmd([[colorscheme gruvbox]])
 vim.keymap.set('n', '<leader>y', '"+y_')
 vim.keymap.set('n', '<leader>Y', 'gg"+yG_')
 vim.keymap.set('n', '<leader>p', '"+p_')
-
-vim.keymap.set('i', '<C-CR>', '<cmd>call augment#Accept()<cr>', { noremap = true })
