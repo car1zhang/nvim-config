@@ -9,13 +9,15 @@ return {
         config = function()
             local cmp = require("cmp")
             cmp.setup({
+                mapping = {
+                    ["<C-Space>"] = cmp.mapping.complete(),
+                    ['<Tab>'] = cmp.mapping.select_next_item(),
+                    ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+                    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+                },
                 snippet = {
                     expand = function(args) require("luasnip").lsp_expand(args.body) end,
                 },
-                mapping = cmp.mapping.preset.insert({
-                    ["<C-Space>"] = cmp.mapping.complete(),
-                    ["<CR>"] = cmp.mapping.confirm({ select = true }),
-                }),
                 sources = {
                     { name = "nvim_lsp" },
                     { name = "luasnip" },
@@ -37,7 +39,6 @@ return {
             })
 
             local lspconfig = require("lspconfig")
-
 
             local on_attach = function(client, bufnr)
                 local opts = { noremap=true, silent=true, buffer=bufnr }
@@ -87,20 +88,6 @@ return {
                 on_attach = on_attach,
                 capabilities = require("cmp_nvim_lsp").default_capabilities()
             })
-
-            local cmp = require('cmp')
-
-            cmp.setup({
-                mapping = {
-                    ['<Tab>'] = cmp.mapping.select_next_item(),
-                    ['<S-Tab>'] = cmp.mapping.select_prev_item(),
-                    ['<CR>'] = cmp.mapping.confirm({ select = true }),
-                },
-                sources = {
-                    { name = 'nvim_lsp' }
-                }
-            })
-
         end,
     },
 }
