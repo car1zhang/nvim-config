@@ -28,6 +28,11 @@ return {
                 filters = {
                     git_ignored = false,
                 },
+                update_focused_file = {
+                    enable = true,
+                    update_cwd = true,
+                    ignore_list = {},
+                },
             })
 
             vim.keymap.set("n", "<leader>e", ":NvimTreeFindFile<CR>", { desc = "Open Nvimtree" })
